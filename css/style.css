@@ -1,0 +1,594 @@
+@font-face {
+    font-family: 'raleway';
+    src: url('police/Raleway-VariableFont_wght.ttf') format(truetype);
+}
+
+* /*ajout de la propriété Box sizing */
+{
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/*mise en page générale*/
+
+
+#blocPage{
+    font-family: raleway, sans-serif;
+    margin: auto;
+    padding: 0;
+    max-width: 1366px;
+    min-width: 300px;
+}
+
+header{
+    flex-basis: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav{
+    width: 30%;
+}
+
+nav ul{
+    padding: 15px 0;
+}
+
+nav li{
+    width: 100%;
+    list-style-type: none;
+    text-align: center;
+    border-top: 2px transparent blue;
+    padding-top: 40px;
+}
+
+nav li:hover{
+    border-top: 2px solid blue;
+    margin-top: -2px;
+}
+
+
+
+
+/* search section */
+
+
+.searchHeader{
+    display: flex;
+    flex-direction: column;
+}
+.search form{
+    display: inline-flex;
+    width: 80%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+.SearchFormWrapIcon{
+    background-color: #F2f2f2;
+    padding: 1rem 1.25rem;
+    text-align: center;
+    border-radius: 1rem 0 0 1rem;
+}
+.search form input{
+    border-top: 1px solid #f2f2f2;
+    border-bottom: 1px solid #F2f2f2;
+    border-left: none;
+    border-right: none;
+    padding: 0 1.5rem;
+    width: 13rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.search form button{
+    background-color: blue;
+    padding: 0 1.5rem;
+    border-radius: 0 1rem 1rem 0;
+    color: white;
+    font-weight: bold;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#loupe{
+    display: none;
+}
+
+/* filters */
+
+.searchFilters{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top 2rem;
+    justify-content: flex-start;
+}
+
+.searchFilters h2{
+    display: flex;
+    align-items: center;
+    margin: 0 2rem 1rem 0;
+}
+
+.searchFilters div{
+    margin: 0 2rem 1rem 0;
+    border: 2px #f2f2f2 solid;
+    border-radius: 2rem;
+    padding: 0 1rem 0 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.searchFilters i{
+    background-color: #DEEBFF;
+    color: blue;
+    border: 2px #DEEBFF solid;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 100%;
+    margin-right: 1rem;
+    margin-left: -2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* search results */
+
+.searchResult{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.searchResultWrapIcon{
+    margin-right: 1rem;
+}
+
+.searchResultWrapIcon i{
+    color: blue;
+    border: 1px #DEEBFF solid ;
+    border-radius: 100%;
+    margin-right: 1rem;
+}
+.searchResult p{
+    font-size: 1rem;
+    font-weight: lighter;
+    margin-right: 1rem;
+    width: 80%;
+}
+
+
+/*main container for search results */
+
+
+main{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.mainResult{
+    width: 66%;
+    padding: 0 2%;
+}
+
+.titleResult, .footerResult, .activitiesTitle{
+    margin: 5% 1%;
+}
+
+.mainBorder{
+    border-radius: 2rem;
+    background-color: #f2f2f2;
+}
+
+.rowResult{
+    display: flex;
+    justify-content: space-between;
+    margin: 3% 0;
+}
+
+.footerResult{
+    font-size: 0.9rem;
+}
+
+/*main card styling */
+
+.card{
+    border: 3px white solid;
+    border-radius: 1.5rem;
+    box-shadow: 0.5rem;
+    background-color: white;
+    overflow: hidden;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.mainCardSize{
+    min-width: 190px;
+    width: 33%;
+    margin: 0 1%;
+}
+
+.card a{
+    text-decoration: none;
+    color: black;
+}
+
+.imageHolder{
+    width: 100%;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imageHolder img{
+    width: 100%;
+    min-height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cardTitle h5, .cardTitle p, .cardPrice p{
+    margin: 0.3rem 0;
+    padding-left: 0.5rem;
+}
+
+.cardTitle{
+    font-size: 1.2rem;
+}
+.cardPrice{
+    font-size: 0.9rem;
+}
+
+.cardRating {
+    display: flex;
+    color: #0065fc;
+    font-size: 0.5rem;
+    margin: 0.5rem;
+}
+
+/* aside container */
+
+.mostPopular{
+    width: 33%;
+    padding: 0 2%;
+}
+
+.popularTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* popular card styling */
+
+.popularCardSize{
+    width: 100%;
+    height: 140px;
+    margin-bottom: 5%;
+}
+.popularCardSize a{
+    display: flex;
+    height: 100%;
+}
+
+.imageHolder1{
+    height: 100%;
+    width: 40%;
+    overflow: hidden;
+    position: relative;
+}
+
+.imageHolder1 img{
+    min-width: 100%;
+    width: auto;
+    height: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.cardBodyPopular{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0.2rem;
+    width: 60%;
+}
+
+.cardBodyPopular p{
+    font-size: 0.9rem;
+}
+
+/* activities css */
+
+.activitiesDisplay{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.part1{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.part1 section {
+    width: 100%;
+}
+
+.part1CardSize{
+    width: 90%;
+    height: 500px;
+}
+
+.part1CardSize div h4, .part2CardSize div h4{
+    margin-left: 0.5rem;
+}
+
+.activitiesTitle{
+    margin: 5% 0 0 0;
+}
+
+.activitiesHolder1{
+    height: 80%;
+}
+
+.activitiesHolder1 img{
+    height: fit-content;
+    width: 300%;
+}
+
+.part2CardSize{
+    height: 240px;
+    width: 90%;
+}
+.part2CardSize .imageHolder img{
+    width: 100%;
+}
+
+.test5{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* footer part */
+
+footer{
+    display: flex;
+    background-color: #f2f2f2;
+    margin-top: 3rem;
+}
+footer div{
+    width: 30%;
+    padding-left: 15px;;
+}
+footer div ul{
+    padding-left: 0;
+}
+
+footer h3{
+    font-size: 1rem;
+}
+footer a{
+    font-size: 0.85rem;
+}
+
+
+@media  screen and (max-width: 992px) {
+    nav{
+        width: 50%;
+    }
+    main{
+        flex-direction: column;
+    }
+    .titleResult, .footerResult{
+        margin: 1% 1%;
+    }
+    .mainResult{
+        width: 100%;
+        margin-top: 1rem;
+    }
+    aside{
+        order: -1;
+    }
+    .mostPopular{
+        width: 100%;
+    }
+    .columnResult{
+        display: flex;
+        justify-content: space-between;
+    }
+    .popularCardSize{
+        margin: 0 1% 5% 1%;
+    }
+
+    .imageHolder1{
+        width: 70%;
+    }
+
+
+    .activitiesDisplay{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .part1{
+        margin-bottom: 5%;
+    }
+    .test5{
+        align-items: center;
+    }
+
+    .activitiesHolder1 img{
+        height: fit-content;
+        top: 50%;
+        width: 150%;
+    }
+}
+
+
+
+@media  screen and (max-width: 768px) {
+    #blocPage{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    header{
+        flex-direction: column;
+    }
+
+    .logo{
+        text-align: center;
+    }
+    .logo img{
+        padding: 0 0 0 1.5rem;
+    }
+     
+    nav{
+        width: 100%;
+    }
+    nav li{
+        padding-top: 0px;
+        padding-bottom: 1rem;
+        margin-top: 0;
+        text-align: center;
+    }
+    nav li:hover{
+         border-bottom: 2px blue solid;
+         border-top: 2px hidden;
+         margin-bottom: -2px;
+    }
+
+    nav li a{
+        font-size: 1.5rem;
+    }
+
+    .search{
+        max-width: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+    }
+    .searchHeader h1{
+        width: 80%;
+    }
+
+    .searchFilters h2{
+        width: 100%;
+    }
+    .searchFormButton{
+         display: none;
+    }
+    #loupe{
+        display: inline-block;
+    }
+
+    .mainResult{
+        background-color: white;
+    }
+    .mostPopular{
+        border-radius: 0;
+        background-color: #d8d8d8;
+    }
+
+    .rowResult{
+        align-items: center;
+    }
+
+    .columnResult{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .popularCardSize{
+        height: 200px;
+    }
+
+
+    .imageHolder{
+        height: 65%;
+    }
+    .imageHolder img{
+        top: 10%;
+    }
+
+    .imageHolder1{
+        width: 40%;
+        position: relative;
+    }
+    .imageHolder1 img{
+        height: 100%;
+        width: min-content;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);    }
+
+    .part1{
+        flex-direction: column;
+        margin: 0;
+    }
+    .mobileCardSize{
+        width: 100%;
+        height: 200px;
+        margin-bottom: 5%;
+    }
+
+    .rowResult{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .mainBorder{
+        box-shadow:
+    }
+
+    .activitiesHolder1 img{
+        height: fit-content;
+        width: 100%;
+    }
+
+    footer{
+        flex-direction: column;
+    }
+    footer div{
+        width: 100%;
+    }
+    footer h3{
+        font-size: 1.5rem;
+    }
+    footer a{
+        font-size: 1.3rem;
+    }
+
+}
