@@ -411,6 +411,10 @@ main h4{
     align-items: center;
 }
 
+.cardBodyV2 .cardRating{
+    margin: 5px 0;
+}
+
 .greyStar{
     display: flex;
     align-items: center;
@@ -589,10 +593,11 @@ footer ul li{
     }
 
     .cardV2{
+        width: 90%;
         margin-bottom: 3%;
     }
     .cardV2 a{
-        height: 200px;
+        height: 150px;
     }
 
     .activitiesPart1 .rowRight, .activitiesPart2 .rowRight{
