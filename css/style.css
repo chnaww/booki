@@ -426,7 +426,7 @@ footer ul li{
 }
 
 
-@media  screen and (max-width: 992px){
+@media  all and (max-width: 992px){
     /* agrandissement de la barre de navigation */
     .navLinks{
         width: 50%;
@@ -473,7 +473,11 @@ footer ul li{
     }
 }
 
-@media  screen and (max-width: 768px){
+@media  all and (max-width: 768px){
+
+    #paddingHeader{
+        padding: 0;
+    }
 
     /* agencement pour logo et navigation */
     header{
@@ -497,6 +501,10 @@ footer ul li{
         border-top: 0;
         border-bottom: 2px #F2f2f2 solid;
         padding-bottom: 2%;
+    }
+
+    .navLinks ul{
+        padding-left: 0;
     }
 
     .navLinks ul li:hover{
