@@ -20,7 +20,7 @@ a{
 
 #blocPage{
     font-family: raleway, sans-serif;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     max-width: 1366px;
     min-width: 350px;
@@ -60,11 +60,17 @@ header {
     text-align: center;
     width: 100%;    
     border-top: 2px solid transparent;
+}
+
+.navLinks ul li a{
+    display: inline-block;
+    width: 100%;
+    border-top: 2px solid transparent;
     padding-top: 50px;
 }
 
-.navLinks ul li:hover{
-    border-top-color:#0065BC;
+.navLinks ul li a:hover{
+    border-top-color:#0065FC;
 }
 .navLinks ul li a:hover{
     color: #0065FC;
@@ -499,19 +505,19 @@ footer ul li{
         padding:0 ;
     }
 
-    .navLinks ul li{
+    .navLinks ul li a{
         padding-top: 5%;
         font-size: 30px;
         border-top: 0;
         border-bottom: 2px #F2f2f2 solid;
-        padding-bottom: 2%;
+        padding-bottom: 5%;
     }
 
     .navLinks ul{
         padding-left: 0;
     }
 
-    .navLinks ul li:hover{
+    .navLinks ul li a:hover{
         border-bottom: 2px solid#0065FC;
     }
 
